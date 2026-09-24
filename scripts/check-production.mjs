@@ -6,7 +6,9 @@
  *   1. A `[TODO: ...]` marker survives anywhere in the rendered source.
  *   2. A pricing tier still carries a TIER_1_PRICE / TIER_2_PRICE placeholder.
  *   3. A required Paddle environment variable is missing.
- *   4. Paddle is pointed at sandbox.
+ *   4. Paddle is not pointed at production (lib/paddle.ts falls back to
+ *      sandbox for any value other than exactly "production").
+ *   5. The client token does not match the environment (live_ vs test_).
  *
  * STRICT mode is on when VERCEL_ENV=production (a real production deploy) or
  * when --strict is passed. Local builds and Vercel preview deploys only warn,
@@ -121,9 +123,26 @@ if (missingEnv.length > 0) {
   problems.push(`Missing environment variable(s): ${missingEnv.join(", ")}`);
 }
 
-if (STRICT && process.env.NEXT_PUBLIC_PADDLE_ENV === "sandbox") {
+const paddleEnv = process.env.NEXT_PUBLIC_PADDLE_ENV?.trim();
+const clientToken = process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN?.trim();
+
+if (paddleEnv && paddleEnv !== "production" && paddleEnv !== "sandbox") {
+  problems.push(
+    `NEXT_PUBLIC_PADDLE_ENV is '${paddleEnv}'. Only 'production' or 'sandbox' are valid; anything else runs checkout in sandbox.`,
+  );
+}
+
+if (STRICT && paddleEnv === "sandbox") {
   problems.push(
     "NEXT_PUBLIC_PADDLE_ENV is 'sandbox' in a production deploy. Set it to 'production'.",
+  );
+}
+
+// Paddle prefixes client-side tokens with live_ or test_ by environment.
+const expectedPrefix = paddleEnv === "production" ? "live_" : "test_";
+if (clientToken && !clientToken.startsWith(expectedPrefix)) {
+  problems.push(
+    `NEXT_PUBLIC_PADDLE_CLIENT_TOKEN does not start with '${expectedPrefix}', so it does not match NEXT_PUBLIC_PADDLE_ENV='${paddleEnv ?? "(unset)"}'.`,
   );
 }
 

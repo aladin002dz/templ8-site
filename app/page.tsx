@@ -127,7 +127,7 @@ const FAQ = [
   },
   {
     q: "What if I want a refund?",
-    a: `Refunds are handled within ${REFUND_DAYS} days of purchase, subject to the conditions on the refunds page — please read it before buying, because the product is source code delivered immediately.`,
+    a: `You can request a refund within ${REFUND_DAYS} days of purchase, subject to the conditions on the refunds page. Refunds are processed by Paddle, as merchant of record. Please read that page before buying: access is a private GitHub repository sent ${DELIVERY_DELAY}, and once you have cloned it the copy cannot be taken back.`,
   },
 ];
 

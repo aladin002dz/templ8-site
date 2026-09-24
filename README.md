@@ -30,7 +30,8 @@ through 10.
 2. A pricing tier still carries a `TIER_1_PRICE` / `TIER_2_PRICE` placeholder.
 3. A required `NEXT_PUBLIC_PADDLE_*` / `NEXT_PUBLIC_SITE_URL` variable is
    missing.
-4. `NEXT_PUBLIC_PADDLE_ENV` is `sandbox`.
+4. `NEXT_PUBLIC_PADDLE_ENV` is anything other than `production`.
+5. The client token prefix (`live_` / `test_`) does not match the environment.
 
 It is **enforced** when `VERCEL_ENV=production` — i.e. on a real production
 deploy. Local builds and Vercel preview deploys print the same report but do
