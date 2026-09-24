@@ -8,6 +8,7 @@ import {
   JURISDICTION,
   LEGAL_ENTITY,
   PADDLE_BUYER_TERMS_URL,
+  PADDLE_RESELLER_NOTICE,
   REFUND_DAYS,
   SITE_NAME,
   SUPPORT_EMAIL,
@@ -23,7 +24,7 @@ export default function TermsPage() {
   return (
     <LegalPage
       title="Terms and licence"
-      updated="[TODO: date these terms take effect]"
+      updated="24 September 2026"
       intro={`These terms cover buying and using ${SITE_NAME}, a Next.js starter kit sold as a one-time licence by ${LEGAL_ENTITY} ("we", "us"). Buying a licence means you accept them.`}
     >
       <LegalSection heading="What you are buying">
@@ -113,6 +114,7 @@ export default function TermsPage() {
       </LegalSection>
 
       <LegalSection heading="Payment and the merchant of record">
+        <p>{PADDLE_RESELLER_NOTICE}</p>
         <p>
           Paddle.com Market Ltd is the merchant of record and processes
           payments. When you buy, your contract for the transaction is with

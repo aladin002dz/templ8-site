@@ -16,37 +16,36 @@ export const SITE_DESCRIPTION =
   "Templ8 is a Next.js SaaS starter kit with authentication, subscription billing, a serverless Postgres database, role-based administration, dark mode, internationalisation and automated tests. One-time licence, full source code.";
 
 /** Shown in the footer on every page, and in the homepage hero. */
-export const SUPPORT_EMAIL = "[TODO: support email, e.g. support@mahfoudh.dev]";
+export const SUPPORT_EMAIL = "hello@mahfoudh.dev";
 
 /** The legal person selling the licence. Appears in /terms and /privacy. */
-export const LEGAL_ENTITY = "[TODO: legal entity or trading name]";
+export const LEGAL_ENTITY = "Mahfoudh Arous";
 
 /** Governing law for /terms. Mirrors [JURISDICTION] in the Templ8 LICENSE.md. */
-export const JURISDICTION = "[TODO: governing law jurisdiction]";
+export const JURISDICTION = "Algeria";
 
 /** Required on invoices/legal pages in many jurisdictions. Confirm your own. */
-export const BUSINESS_ADDRESS = "[TODO: business address, if required]";
+export const BUSINESS_ADDRESS = "Chlef, Algeria";
 
 /** Public demo of the running starter kit. */
-export const DEMO_URL = "[TODO: live demo URL]";
+export const DEMO_URL = "https://templ8-two.vercel.app";
 
 /**
  * How long after purchase the GitHub repository invitation is sent.
  * Buyers see this before they pay, so state the realistic worst case.
  */
-export const DELIVERY_DELAY = "[TODO: expected delivery delay, e.g. within 24 hours]";
+export const DELIVERY_DELAY = "within 24 hours of receiving your GitHub username";
 
 /** Target first-response time, shown on /contact. */
-export const SUPPORT_RESPONSE_TIME =
-  "[TODO: expected support response time, e.g. 2 business days]";
+export const SUPPORT_RESPONSE_TIME = "within 48 hours";
 
 /**
  * Refund window in days.
  *
- * TODO(owner): verify this against Paddle's current refund requirements before
- * launch — Paddle is the merchant of record and its buyer terms govern what a
- * buyer can claim regardless of what is written here. Paddle may also approve a
- * refund at its own discretion outside this window.
+ * Matches the 14-day window in Paddle's buyer refund policy
+ * (https://www.paddle.com/legal/refund-policy). Paddle is the merchant of
+ * record and its buyer terms govern what a buyer can claim regardless of what
+ * is written here; Paddle may also approve a refund outside this window.
  */
 export const REFUND_DAYS = 14;
 
@@ -55,6 +54,14 @@ export const PADDLE_BUYER_TERMS_URL = "https://www.paddle.com/legal/checkout-buy
 
 export const MERCHANT_OF_RECORD =
   "Paddle.com Market Ltd is the merchant of record and processes payments";
+
+/**
+ * Reseller disclosure, following the wording in Paddle's seller handbook
+ * (https://www.paddle.com/seller-guides/seller-handbook). The last sentence is
+ * adapted so it does not contradict /contact, where product support is ours.
+ */
+export const PADDLE_RESELLER_NOTICE =
+  "Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle handles payment, invoicing, sales tax and refund processing; product support is provided by us.";
 
 export const FOOTER_LINKS = [
   { href: "/terms", label: "Terms" },

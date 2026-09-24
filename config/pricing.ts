@@ -40,7 +40,7 @@ export const TIERS: Tier[] = [
     id: "single",
     name: "Single Application",
     summary: "One product, built by you or your team.",
-    amount: TIER_1_PRICE,
+    amount: 79,
     currency: "USD",
     paddlePriceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_ID_TIER_1,
     includes: [
@@ -55,7 +55,7 @@ export const TIERS: Tier[] = [
     id: "unlimited",
     name: "Unlimited Applications",
     summary: "Unlimited products, including client work.",
-    amount: TIER_2_PRICE,
+    amount: 149,
     currency: "USD",
     paddlePriceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_ID_TIER_2,
     includes: [

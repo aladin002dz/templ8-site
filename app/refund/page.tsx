@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LegalList, LegalPage, LegalSection } from "@/components/legal-page";
 import {
   PADDLE_BUYER_TERMS_URL,
+  PADDLE_RESELLER_NOTICE,
   REFUND_DAYS,
   SITE_NAME,
   SUPPORT_EMAIL,
@@ -18,7 +19,7 @@ export default function RefundPage() {
   return (
     <LegalPage
       title="Refunds"
-      updated="[TODO: date this policy takes effect]"
+      updated="24 September 2026"
       intro={`${SITE_NAME} is source code, and once you have it you have it. This page is written plainly so you know exactly where you stand before you pay.`}
     >
       <LegalSection heading={`The ${REFUND_DAYS}-day window`}>
@@ -100,6 +101,7 @@ export default function RefundPage() {
       </LegalSection>
 
       <LegalSection heading="How the money reaches you">
+        <p>{PADDLE_RESELLER_NOTICE}</p>
         <p>
           Paddle.com Market Ltd is the merchant of record, so Paddle issues the
           actual refund to your original payment method. We authorise it; Paddle
@@ -129,10 +131,24 @@ export default function RefundPage() {
           than this policy does, that law applies.
         </p>
         <p>
-          [TODO: confirm how the EU/UK digital-content right of withdrawal
-          applies to your sales — buyers may be asked to waive the 14-day
-          cancellation right at checkout in exchange for immediate delivery, and
-          this page should match what your Paddle checkout actually does]
+          If you are a consumer in the EU, EEA or UK, you have a statutory right
+          to withdraw from your purchase within 14 days without giving a reason.
+          For digital content such as {SITE_NAME}, that right ends once you
+          start downloading or using it (for example, by accepting the
+          repository invitation or cloning the repository), but only if you
+          expressly agreed at checkout to receive the content before the 14 days
+          are up and acknowledged that you would lose the right. If you did not
+          give that agreement, you keep the full 14-day right. How this works
+          for your purchase is set out in Paddle&rsquo;s{" "}
+          <a
+            className="font-medium text-slate-900 underline underline-offset-4 dark:text-slate-100"
+            href={PADDLE_BUYER_TERMS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            checkout buyer terms
+          </a>
+          .
         </p>
       </LegalSection>
     </LegalPage>
