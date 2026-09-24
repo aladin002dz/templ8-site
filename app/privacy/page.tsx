@@ -18,7 +18,7 @@ export default function PrivacyPage() {
   return (
     <LegalPage
       title="Privacy"
-      updated="[TODO: date this policy takes effect]"
+      updated="24 September 2026"
       intro={`This page explains what happens to your data when you visit this site or buy ${SITE_NAME}. It is deliberately short, because this site does very little with data.`}
     >
       <LegalSection heading="What this site collects">
@@ -93,7 +93,7 @@ export default function PrivacyPage() {
             "Paddle.com Market Ltd — payment processing, invoicing and tax, as merchant of record.",
             "Vercel — hosting and delivery of this website.",
             "GitHub — the repository invitation and your access to the source code.",
-            "[TODO: email provider used for the support inbox, e.g. Google Workspace]",
+            "Cloudflare (Email Routing) and Google (Gmail) — receiving and storing email sent to the support inbox.",
           ]}
         />
       </LegalSection>
@@ -133,10 +133,6 @@ export default function PrivacyPage() {
           >
             {SUPPORT_EMAIL}
           </a>
-        </p>
-        <p>
-          [TODO: if you are established in, or sell to, the EU or UK, confirm
-          whether you need to name a representative or a DPO here]
         </p>
       </LegalSection>
 

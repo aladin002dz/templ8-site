@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   FOOTER_LINKS,
   LEGAL_ENTITY,
-  MERCHANT_OF_RECORD,
+  PADDLE_RESELLER_NOTICE,
   SITE_NAME,
   SUPPORT_EMAIL,
 } from "@/config/site";
@@ -44,7 +44,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 space-y-2 border-t border-slate-200 pt-6 text-xs text-slate-500 dark:border-slate-800 dark:text-slate-500">
-          <p>{MERCHANT_OF_RECORD}.</p>
+          <p>{PADDLE_RESELLER_NOTICE}</p>
           <p>
             © {new Date().getFullYear()} {LEGAL_ENTITY}. All rights reserved.
           </p>
