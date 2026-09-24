@@ -3,6 +3,7 @@ import { LegalList, LegalPage, LegalSection } from "@/components/legal-page";
 import {
   BUSINESS_ADDRESS,
   LEGAL_ENTITY,
+  LEGAL_ENTITY_DESCRIPTION,
   PADDLE_BUYER_TERMS_URL,
   SITE_NAME,
   SUPPORT_EMAIL,
@@ -19,7 +20,7 @@ export default function PrivacyPage() {
     <LegalPage
       title="Privacy"
       updated="24 September 2026"
-      intro={`This page explains what happens to your data when you visit this site or buy ${SITE_NAME}. It is deliberately short, because this site does very little with data.`}
+      intro={`This page explains what happens to your data when you visit this site or buy ${SITE_NAME}. ${SITE_NAME} is sold by ${LEGAL_ENTITY}, ${LEGAL_ENTITY_DESCRIPTION} ("we", "us"), through our reseller Paddle.com Market Ltd, which is the merchant of record. It is deliberately short, because this site does very little with data.`}
     >
       <LegalSection heading="What this site collects">
         <p>
@@ -123,7 +124,7 @@ export default function PrivacyPage() {
           The data controller for this site and for support correspondence is:
         </p>
         <p>
-          {LEGAL_ENTITY}
+          {LEGAL_ENTITY} ({LEGAL_ENTITY_DESCRIPTION})
           <br />
           {BUSINESS_ADDRESS}
           <br />

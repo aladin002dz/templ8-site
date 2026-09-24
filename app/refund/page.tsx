@@ -11,7 +11,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Refunds",
-  description: `The refund policy for ${SITE_NAME}: the ${REFUND_DAYS}-day window, what happens with source code delivered immediately, and how a refund affects repository access.`,
+  description: `The refund policy for ${SITE_NAME}: the ${REFUND_DAYS}-day window, why source code delivered as a GitHub repository is different, and how a refund affects repository access.`,
   alternates: { canonical: "/refund" },
 };
 
@@ -35,6 +35,10 @@ export default function RefundPage() {
           with your Paddle order reference and a sentence about what went wrong.
           You do not need to justify the request at length, but telling us what
           did not work helps us fix it.
+        </p>
+        <p>
+          Refunds are processed by Paddle.com Market Ltd, the merchant of
+          record, and are paid back to your original payment method.
         </p>
       </LegalSection>
 

@@ -7,6 +7,7 @@ import {
   DELIVERY_DELAY,
   JURISDICTION,
   LEGAL_ENTITY,
+  LEGAL_ENTITY_DESCRIPTION,
   PADDLE_BUYER_TERMS_URL,
   PADDLE_RESELLER_NOTICE,
   REFUND_DAYS,
@@ -25,7 +26,7 @@ export default function TermsPage() {
     <LegalPage
       title="Terms and licence"
       updated="24 September 2026"
-      intro={`These terms cover buying and using ${SITE_NAME}, a Next.js starter kit sold as a one-time licence by ${LEGAL_ENTITY} ("we", "us"). Buying a licence means you accept them.`}
+      intro={`These terms cover buying and using ${SITE_NAME}, a Next.js starter kit sold as a one-time licence by ${LEGAL_ENTITY}, ${LEGAL_ENTITY_DESCRIPTION} ("we", "us"), through our reseller and merchant of record Paddle.com Market Ltd. Buying a licence means you accept them.`}
     >
       <LegalSection heading="What you are buying">
         <p>
@@ -175,8 +176,10 @@ export default function TermsPage() {
           >
             refunds page
           </Link>
-          . Please read it before buying — the product is source code that is
-          delivered immediately, which affects what can be refunded.
+          . Refunds are processed by Paddle as merchant of record. Please read
+          that page before buying — the product is source code delivered as a
+          private GitHub repository {DELIVERY_DELAY}, and a cloned copy cannot
+          be taken back, which affects what can be refunded.
         </p>
       </LegalSection>
 
@@ -224,7 +227,7 @@ export default function TermsPage() {
           to conflict of law provisions.
         </p>
         <p>
-          {LEGAL_ENTITY}
+          {LEGAL_ENTITY} ({LEGAL_ENTITY_DESCRIPTION})
           <br />
           {BUSINESS_ADDRESS}
           <br />

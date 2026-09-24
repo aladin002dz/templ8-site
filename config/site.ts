@@ -21,6 +21,9 @@ export const SUPPORT_EMAIL = "hello@mahfoudh.dev";
 /** The legal person selling the licence. Appears in /terms and /privacy. */
 export const LEGAL_ENTITY = "Mahfoudh Arous";
 
+/** How the seller is described next to LEGAL_ENTITY in /terms and /privacy. */
+export const LEGAL_ENTITY_DESCRIPTION = "an individual based in Algeria";
+
 /** Governing law for /terms. Mirrors [JURISDICTION] in the Templ8 LICENSE.md. */
 export const JURISDICTION = "Algeria";
 
@@ -50,7 +53,7 @@ export const SUPPORT_RESPONSE_TIME = "within 48 hours";
 export const REFUND_DAYS = 14;
 
 /** Paddle's own buyer-facing checkout terms. Linked from /terms and /refund. */
-export const PADDLE_BUYER_TERMS_URL = "https://www.paddle.com/legal/checkout-buyer-terms";
+export const PADDLE_BUYER_TERMS_URL = "https://www.paddle.com/legal/buyer-terms";
 
 export const MERCHANT_OF_RECORD =
   "Paddle.com Market Ltd is the merchant of record and processes payments";
